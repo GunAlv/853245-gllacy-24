@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Gun](https://up.htmlacademy.ru/htmlcss/24/user/853245).
-* Наставник: `Неизвестно`.
+* Наставник: `Полина Катышева` (https://htmlacademy.ru/profile/polina).
 
 ---
 
