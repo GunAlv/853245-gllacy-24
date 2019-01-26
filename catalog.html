@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Глейси</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-     <header class="main-header">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Academy: Глейси</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="main-header main-header--catalog">
       <div class="wrapper">
         <nav class="main-nav">
           <a href="index.html" class="main-nav__logo">
@@ -65,7 +65,7 @@
               </form>
             </li>
             <li class="user-nav__item">
-              <a href="#" class="user-nav__cart">Пусто</a>
+              <a href="#" class="user-nav__cart">2 товара</a>
               <div class="user-nav__cart-container">
                 <ul class="user-nav__cart-list">
                   <li class="user-nav__cart-item">
@@ -108,68 +108,47 @@
         </nav>
       </div>
      </header>
-     <main class="page-main">
-      <h1 class="visually-hidden">Магазин мороженого Глейси</h1>
-      <section class="schedule">
-        <div class="wrapper">
-          <p class="schedule__everyday">
-            С 10 до 20, ежедневно
-          </p>
-          <p class="schedule__phone">
-            8 812 450-25-25
-          </p>
-        </div>
-      </section>
-      <section class="slider">
-        <div class="wrapper">
-          <div class="slider__titles">
-            <h2 class="slider__title slider__title--first">
-              Крем-брюле и пломбир с малиновым джемом
-            </h2>
-            <h2 class="slider__title slider__title--second">
-              Шоколадный пломбир и лимонный сорбет
-            </h2>
-            <h2 class="slider__title slider__title--third">
-              Пломбир с помадкой и клубничный щербет
-            </h2>
-          </div>
-          <div class="slider__container">
-            <input type="checkbox" class="slider__input slider__input--first">
-            <input type="checkbox" class="slider__input slider__input--second">
-            <input type="checkbox" class="slider__input slider__input--third">
-            <a href="#" class="button slider__button">Давайте оба!</a>
-          </div>
-        </div>
-      </section>
-      <section class="offers">
-       <div class="wrapper">
-        <ul class="offers__list">
-          <li class="offers__item offers__item--first">
-            <h3 class="offers__caption">
-              Малинка даром!
-            </h3>
-            <p class="offers__descript">
-              При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
+     <main class="catalog-main">
+       <div class="container">
+         <div class="wrapper container__wrapper">
+           <ul class="bread-crumbs">
+             <li class="bread-crumbs__item">
+               <a class="bread-crumbs__link" href="index.html">
+                 Главная
+               </a>
+             </li>
+             <li class="bread-crumbs__item">
+               <a class="bread-crumbs__link" href="index.html">
+                 Каталог
+               </a>
+             </li>
+             <li class="bread-crumbs__item">
+               <a class="bread-crumbs__link" href="index.html">
+                 Сливочное
+               </a>
+             </li>
+           </ul>
+           <section class="schedule">
+            <p class="schedule__everyday">
+              С 10 до 20, ежедневно
             </p>
-            <a href="#" class="button offers__button offers__button--razz">
-              Хочу варенья!
-            </a>
-          </li>
-          <li class="offers__item offers__item--second">
-            <h3 class="offers__caption">
-              Шоколадки даром!
-            </h3>
-            <p class="offers__descript">
-              При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
+            <p class="schedule__phone">
+              8 812 450-25-25
             </p>
-            <a href="#" class="button offers__button offers__button--chocolate">
-              Хочу шоколадки!
-            </a>
-          </li>
-        </ul>
+          </section>
+         </div>
        </div>
-      </section>
-      <section class="ice-creams">
+       <section class="form">
+        <div class="wrapper">
+          <h1 class="form__title">
+           Сливочное мороженое
+         </h1>
+         <form action="#">
+           <!-- Здесь будет форма -->
+         </form>
+        </div>
+       </section>
+       <section class="ice-creams">
         <div class="wrapper">
           <ul class="ice-creams__list">
             <li class="ice-creams__item">
@@ -180,6 +159,9 @@
               <h4 class="ice-creams__caption">
                 Сливочное с апельсиновым джемом и цитрусовой стружкой
               </h4>
+              <button type="button" class="button ice-creams__button">
+                Быстрый просмотр
+              </button>
             </li>
             <li class="ice-creams__item">
               <img src="#" alt="Сливочно-кофейное с кусочками шоколада" class="ice-creams__img">
@@ -189,6 +171,9 @@
               <h4 class="ice-creams__caption">
                 Сливочно-кофейное с кусочками шоколада
               </h4>
+              <button type="button" class="button ice-creams__button">
+                Быстрый просмотр
+              </button>
             </li>
             <li class="ice-creams__item">
               <img src="#" alt="Сливочно-клубничное с присыпкой из белого шоколада" class="ice-creams__img">
@@ -198,6 +183,9 @@
               <h4 class="ice-creams__caption">
                 Сливочно-клубничное с присыпкой из белого шоколада
               </h4>
+              <button type="button" class="button ice-creams__button">
+                Быстрый просмотр
+              </button>
             </li>
             <li class="ice-creams__item">
               <img src="#" alt="Сливочное крем-брюле с карамельной подливкой" class="ice-creams__img">
@@ -207,81 +195,138 @@
               <h4 class="ice-creams__caption">
                 Сливочное крем-брюле с карамельной подливкой
               </h4>
+              <button type="button" class="button ice-creams__button">
+                Быстрый просмотр
+              </button>
+            </li>
+            <li class="ice-creams__item">
+              <img src="#" alt="Сливочное с брусничным джемом" class="ice-creams__img">
+              <p class="ice-creams__price">
+                325₽<span>/кг</span>
+              </p>
+              <h4 class="ice-creams__caption">
+                Сливочное с брусничным джемом
+              </h4>
+              <button type="button" class="button ice-creams__button">
+                Быстрый просмотр
+              </button>
+            </li>
+            <li class="ice-creams__item">
+              <img src="#" alt="Сливочно-черничное с цельными ягодами черники" class="ice-creams__img">
+              <p class="ice-creams__price">
+                410₽<span>/кг</span>
+              </p>
+              <h4 class="ice-creams__caption">
+                Сливочно-черничное с цельными ягодами черники
+              </h4>
+              <button type="button" class="button ice-creams__button">
+                Быстрый просмотр
+              </button>
+            </li>
+            <li class="ice-creams__item">
+              <img src="#" alt="Сливочно-лимонное с карамельной присыпкой" class="ice-creams__img">
+              <p class="ice-creams__price">
+                375₽<span>/кг</span>
+              </p>
+              <h4 class="ice-creams__caption">
+                Сливочно-лимонное с карамельной присыпкой
+              </h4>
+              <button type="button" class="button ice-creams__button">
+                Быстрый просмотр
+              </button>
+            </li>
+            <li class="ice-creams__item">
+              <img src="#" alt="Сливочное с шоколадной стружкой" class="ice-creams__img">
+              <p class="ice-creams__price">
+                320₽<span>/кг</span>
+              </p>
+              <h4 class="ice-creams__caption">
+                Сливочное с шоколадной стружкой
+              </h4>
+              <button type="button" class="button ice-creams__button">
+                Быстрый просмотр
+              </button>
+            </li>
+            <li class="ice-creams__item">
+              <img src="#" alt="Сливочно-ванильное с кусочками шоколада" class="ice-creams__img">
+              <p class="ice-creams__price">
+                440₽<span>/кг</span>
+              </p>
+              <h4 class="ice-creams__caption">
+                Сливочно-ванильное с кусочками шоколада
+              </h4>
+              <button type="button" class="button ice-creams__button">
+                Быстрый просмотр
+              </button>
+            </li>
+            <li class="ice-creams__item">
+              <img src="#" alt="Сливочноe с ментоловым сиропом" class="ice-creams__img">
+              <p class="ice-creams__price">
+                435₽<span>/кг</span>
+              </p>
+              <h4 class="ice-creams__caption">
+                Сливочноe с ментоловым сиропом
+              </h4>
+              <button type="button" class="button ice-creams__button">
+                Быстрый просмотр
+              </button>
+            </li>
+            <li class="ice-creams__item">
+              <img src="#" alt="Сливочное с кусочками черного шоколада" class="ice-creams__img">
+              <p class="ice-creams__price">
+                355₽<span>/кг</span>
+              </p>
+              <h4 class="ice-creams__caption">
+                Сливочное с кусочками черного шоколада
+              </h4>
+              <button type="button" class="button ice-creams__button">
+                Быстрый просмотр
+              </button>
+            </li>
+            <li class="ice-creams__item">
+              <img src="#" alt="Сливочное с мятным сиропом" class="ice-creams__img">
+              <p class="ice-creams__price">
+                420₽<span>/кг</span>
+              </p>
+              <h4 class="ice-creams__caption">
+                Сливочное с мятным сиропом
+              </h4>
+              <button type="button" class="button ice-creams__button">
+                Быстрый просмотр
+              </button>
+            </li>
+          </ul>
+          <ul class="pagination">
+            <li class="pagination__item">
+              <a href="catalog.html" class="pagination__link">
+                1
+              </a>
+            </li>
+            <li class="pagination__item">
+              <a href="#" class="pagination__link">
+                2
+              </a>
+            </li>
+            <li class="pagination__item">
+              <a href="#" class="pagination__link">
+                3
+              </a>
+            </li>
+            <li class="pagination__item">
+              <a href="#" class="pagination__link">
+                4
+              </a>
+            </li>
+            <li class="pagination__item">
+              <a href="#" class="pagination__link">
+                5
+              </a>
             </li>
           </ul>
         </div>
       </section>
-      <section class="features">
-        <div class="wrapper">
-          <div class="features__pattern">
-            <h5 class="features__title">
-              Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес
-            </h5>
-            <ul class="features__list">
-              <li class="features__item">
-                Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
-              </li>
-              <li class="features__item">
-                Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
-              </li>
-              <li class="features__item">
-                Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
-              </li>
-              <li class="features__item">
-                Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <div class="container">
-        <div class="wrapper container__wrapper">
-          <article class="blog">
-            <a href="#">
-              <p class="blog__descript">
-              Новое в нашем блоге
-              </p>
-              <h6 class="blog__title">
-                10 способов сервировки фруктовых щербетов к столу
-              </h6>
-            </a>
-          </article>
-          <section class="mailing">
-            <div class="mailing__container">
-              <p class="mailing__text">
-                Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
-              </p>
-              <p>
-                <input type="email" class="input mailing__input" placeholder="Электронная почта">
-                <button type="submit" class="button mailing__button">
-                  Отправить
-                </button>
-              </p>
-            </div>
-          </section>
-        </div>
-      </div>
-      <section class="map">
-        <!-- Пока не знаю, как вставить карту -->
-        <div class="wrapper">
-          <div class="map__address">
-            <p class="map__street">
-              Адрес главного офиса<br> и офлайн-магазина:<br>
-              <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
-            </p>
-            <p class="map__phone">
-              Для заказов по телефону:<br>
-              <span>8 812 450-25-25</span><br>
-              (с 10 до 20 ежедневно)
-            </p>
-            <button type="button" class="button map__button">
-              Форма обратной связи
-            </button>
-          </div>
-        </div>
-      </section>
      </main>
-     <footer class="footer">
+     <footer class="footer footer--catalog">
       <div class="wrapper">
         <div class="footer__container">
           <ul class="footer__social">
@@ -331,9 +376,5 @@
         </div>
       </div>
      </footer>
-  </body>
+</body>
 </html>
-
-
-
-
