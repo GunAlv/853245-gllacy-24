@@ -9,7 +9,7 @@
      <header class="main-header">
       <div class="wrapper">
         <nav class="main-nav">
-          <a href="index.html" class="main-nav__logo">
+          <a class="main-nav__logo">
             <img src="#" alt="Логотип Глейси">
           </a>
           <ul class="main-nav__list site-nav">
@@ -20,7 +20,7 @@
                   <a href="#">Новинки</a>
                 </li>
                 <li class="site-nav__submenu-item">
-                  <a href="#">Сливочное</a>
+                  <a href="catalog.html">Сливочное</a>
                 </li>
                 <li class="site-nav__submenu-item">
                   <a href="#">Щербеты</a>
@@ -40,86 +40,47 @@
               <a href="#">О Компании</a>
             </li>
           </ul>
-          <ul class="main-nav__list user-nav">
-            <li class="user-nav__item">
-              <a class="user-nav__search-link" href="#">
+          <div class="main-nav__list">
+            <div class="main-nav__search">
+              <a class="main-nav__search-link" href="#">
               </a>
-              <div class="user-nav__search-container">
-                <input class="user-nav__search-input input" type="text" placeholder="Что ищем?">
+              <div class="main-nav__search-container">
+                <input class="main-nav__search-input input" type="search" placeholder="Что ищем?">
               </div>
-            </li>
-            <li class="user-nav__item">
-              <a href="#" class="user-nav__login">Вход</a>
-              <form action="#" class="user-nav__login-form">
+            </div>
+            <div class="main-nav__login">
+              <a href="#" class="main-nav__login-link">Вход</a>
+              <form action="#" class="main-nav__login-form">
                 <p>
-                  <input class="input user-nav__login-input" type="email" placeholder="Электронная почта">
+                  <input class="input main-nav__login-input" type="email" placeholder="Электронная почта">
                 </p>
                 <p>
-                  <input class="input user-nav__login-input" type="password" placeholder="Пароль">
+                  <input class="input main-nav__login-input" type="password" placeholder="Пароль">
                 </p>
-                <button type="submit" class="user-nav__login-button button">Войти</button>
+                <button type="submit" class="main-nav__login-button button">Войти</button>
                 <p>
-                  <a href="#" class="user-nav__login-link">Забыли пароль?</a><br>
-                  <a href="#" class="user-nav__login-link">Новая регистрация</a>
+                  <a href="#" class="main-nav__login-link">Забыли пароль?</a><br>
+                  <a href="#" class="main-nav__login-link">Новая регистрация</a>
                 </p>
               </form>
-            </li>
-            <li class="user-nav__item">
-              <a href="#" class="user-nav__cart">Пусто</a>
-              <div class="user-nav__cart-container">
-                <ul class="user-nav__cart-list">
-                  <li class="user-nav__cart-item">
-                    <button type="button" class="user-nav__cart-close">
-                    </button>
-                    <img src="#" alt="Пломбир с апельсиновым джемом" class="user-nav__cart-good">
-                    <p class="user-nav__good-title">
-                      Пломбир с апельсиновым джемом
-                    </p>
-                    <p class="user-nav__good-weight">
-                      1,5 кг х 200 руб.
-                    </p>
-                    <p class="user-nav__good-price">
-                      300 руб.
-                    </p>
-                  </li>
-                   <li class="user-nav__cart-item">
-                    <button type="button" class="user-nav__cart-close">
-                    </button>
-                    <img src="#" alt="Клубничный пломбир с присыпкой
-                    из белого шоколада" class="user-nav__cart-good">
-                    <p class="user-nav__good-title">
-                      Клубничный пломбир с присыпкой из белого шоколада
-                    </p>
-                    <p class="user-nav__good-weight">
-                      1,5 кг х 300 руб.
-                    </p>
-                    <p class="user-nav__good-price">
-                      450 руб.
-                    </p>
-                  </li>
-                </ul>
-                <p class="user-nav__total-amount">
-                  Итого: 750 руб.
-                </p>
-                <button class="user-nav__cart-button button">Оформить заказ</button>
-              </div>
-            </li>
-          </ul>
+            </div>
+            <div class="main-nav__cart">
+              <a href="#" class="main-nav__cart-link">Пусто</a>
+            </div>
+            <div class="main-nav__schedule">
+              <p class="main-nav__schedule-days">
+                С 10 до 20, ежедневно
+              </p>
+              <p class="main-nav__schedule-phone">
+                <a href="tel:8-812-450-25-25">8 812 450-25-25</a>
+              </p>
+            </div>
+          </div>
         </nav>
       </div>
      </header>
      <main class="page-main">
       <h1 class="visually-hidden">Магазин мороженого Глейси</h1>
-      <section class="schedule">
-        <div class="wrapper">
-          <p class="schedule__everyday">
-            С 10 до 20, ежедневно
-          </p>
-          <p class="schedule__phone">
-            8 812 450-25-25
-          </p>
-        </div>
-      </section>
       <section class="slider">
         <div class="wrapper">
           <div class="slider__titles">
@@ -133,12 +94,10 @@
               Пломбир с помадкой и клубничный щербет
             </h2>
           </div>
-          <div class="slider__container">
-            <input type="checkbox" class="slider__input slider__input--first">
-            <input type="checkbox" class="slider__input slider__input--second">
-            <input type="checkbox" class="slider__input slider__input--third">
-            <a href="#" class="button slider__button">Давайте оба!</a>
-          </div>
+          <input type="checkbox" class="slider__input slider__input--first">
+          <input type="checkbox" class="slider__input slider__input--second">
+          <input type="checkbox" class="slider__input slider__input--third">
+          <a href="#" class="button slider__button">Давайте оба!</a>
         </div>
       </section>
       <section class="offers">
@@ -169,42 +128,42 @@
         </ul>
        </div>
       </section>
-      <section class="ice-creams">
+      <section class="goods">
         <div class="wrapper">
-          <ul class="ice-creams__list">
-            <li class="ice-creams__item">
-              <img src="#" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" class="ice-creams__img">
-              <p class="ice-creams__price">
+          <ul class="goods__list">
+            <li class="goods__item">
+              <img src="#" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" class="goods__img">
+              <p class="goods__price">
                 310₽<span>/кг</span>
               </p>
-              <h4 class="ice-creams__caption">
+              <h4 class="goods__caption">
                 Сливочное с апельсиновым джемом и цитрусовой стружкой
               </h4>
             </li>
-            <li class="ice-creams__item">
-              <img src="#" alt="Сливочно-кофейное с кусочками шоколада" class="ice-creams__img">
-              <p class="ice-creams__price">
+            <li class="goods__item">
+              <img src="#" alt="Сливочно-кофейное с кусочками шоколада" class="goods__img">
+              <p class="goods__price">
                 380₽<span>/кг</span>
               </p>
-              <h4 class="ice-creams__caption">
+              <h4 class="goods__caption">
                 Сливочно-кофейное с кусочками шоколада
               </h4>
             </li>
-            <li class="ice-creams__item">
-              <img src="#" alt="Сливочно-клубничное с присыпкой из белого шоколада" class="ice-creams__img">
-              <p class="ice-creams__price">
+            <li class="goods__item">
+              <img src="#" alt="Сливочно-клубничное с присыпкой из белого шоколада" class="goods__img">
+              <p class="goods__price">
                 355₽<span>/кг</span>
               </p>
-              <h4 class="ice-creams__caption">
+              <h4 class="goods__caption">
                 Сливочно-клубничное с присыпкой из белого шоколада
               </h4>
             </li>
-            <li class="ice-creams__item">
-              <img src="#" alt="Сливочное крем-брюле с карамельной подливкой" class="ice-creams__img">
-              <p class="ice-creams__price">
+            <li class="goods__item">
+              <img src="#" alt="Сливочное крем-брюле с карамельной подливкой" class="goods__img">
+              <p class="goods__price">
                 415₽<span>/кг</span>
               </p>
-              <h4 class="ice-creams__caption">
+              <h4 class="goods__caption">
                 Сливочное крем-брюле с карамельной подливкой
               </h4>
             </li>
@@ -320,12 +279,12 @@
               <a class="footer__us-link" href="#">Экологические стандарты</a>
             </li>
           </ul>
-          <div class="footer__academy">
+          <div class="footer__copyright">
             <a href="#">
               <img src="#" alt="HTML Academy">
             </a>
-            <p class="footer__academy-text">
-              Сделано в <a class="footer__academy-link" href="">HTML Academy</a> © 2019
+            <p class="footer__copyright-text">
+              Сделано в <a class="footer__copyright-link" href="">HTML Academy</a> © 2019
             </p>
           </div>
         </div>
