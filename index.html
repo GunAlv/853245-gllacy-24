@@ -48,24 +48,24 @@
                 <input class="main-nav__search-input input" type="search" placeholder="Что ищем?">
               </div>
             </div>
-            <div class="main-nav__login">
-              <a href="#" class="main-nav__login-link">Вход</a>
-              <form action="#" class="main-nav__login-form">
+            <div class="main-nav__login user-nav">
+              <a href="#" class="user-nav__login-link">Вход</a>
+              <form action="#" class="user-nav__login-form">
                 <p>
-                  <input class="input main-nav__login-input" type="email" placeholder="Электронная почта">
+                  <input class="input user-nav__login-input" type="email" placeholder="Электронная почта">
                 </p>
                 <p>
-                  <input class="input main-nav__login-input" type="password" placeholder="Пароль">
+                  <input class="input user-nav__login-input" type="password" placeholder="Пароль">
                 </p>
-                <button type="submit" class="main-nav__login-button button">Войти</button>
+                <button type="submit" class="user-nav__login-button button">Войти</button>
                 <p>
-                  <a href="#" class="main-nav__login-link">Забыли пароль?</a><br>
-                  <a href="#" class="main-nav__login-link">Новая регистрация</a>
+                  <a href="#" class="user-nav__login-link">Забыли пароль?</a><br>
+                  <a href="#" class="user-nav__login-link">Новая регистрация</a>
                 </p>
               </form>
             </div>
-            <div class="main-nav__cart">
-              <a href="#" class="main-nav__cart-link">Пусто</a>
+            <div class="cart">
+              <a href="#" class="cart__link">Пусто</a>
             </div>
             <div class="main-nav__schedule">
               <p class="main-nav__schedule-days">
@@ -83,21 +83,31 @@
       <h1 class="visually-hidden">Магазин мороженого Глейси</h1>
       <section class="slider">
         <div class="wrapper">
-          <div class="slider__titles">
-            <h2 class="slider__title slider__title--first">
-              Крем-брюле и пломбир с малиновым джемом
-            </h2>
-            <h2 class="slider__title slider__title--second">
-              Шоколадный пломбир и лимонный сорбет
-            </h2>
-            <h2 class="slider__title slider__title--third">
-              Пломбир с помадкой и клубничный щербет
-            </h2>
+          <div class="slider__list">
+            <div class="slider__item slider__item--first">
+              <h2 class="slider__title">
+                Крем-брюле и пломбир с малиновым джемом
+              </h2>
+              <a href="#" class="button slider__button">Давайте оба!</a>
+            </div>
+            <div class="slider__item slider__item--second">
+              <h2 class="slider__title">
+                Шоколадный пломбир и лимонный сорбет
+              </h2>
+              <a href="#" class="button slider__button">Давайте оба!</a>
+            </div>
+            <div class="slider__item slider__item--third">
+              <h2 class="slider__title">
+                Пломбир с помадкой и клубничный щербет
+              </h2>
+              <a href="#" class="button slider__button">Давайте оба!</a>
+            </div>
           </div>
-          <input type="checkbox" class="slider__input slider__input--first">
-          <input type="checkbox" class="slider__input slider__input--second">
-          <input type="checkbox" class="slider__input slider__input--third">
-          <a href="#" class="button slider__button">Давайте оба!</a>
+          <div class="slider__inputs">
+            <input type="checkbox" class="slider__input slider__input--first">
+            <input type="checkbox" class="slider__input slider__input--second">
+            <input type="checkbox" class="slider__input slider__input--third">
+          </div>
         </div>
       </section>
       <section class="offers">
@@ -131,39 +141,39 @@
       <section class="goods">
         <div class="wrapper">
           <ul class="goods__list">
-            <li class="goods__item">
-              <img src="img/1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" class="goods__img">
-              <p class="goods__price">
+            <li class="product__item">
+              <img src="img/1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" class="product__img">
+              <p class="product__price">
                 310₽<span>/кг</span>
               </p>
-              <h4 class="goods__caption">
+              <h4 class="product__caption">
                 Сливочное с апельсиновым джемом и цитрусовой стружкой
               </h4>
             </li>
-            <li class="goods__item">
-              <img src="img/2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада" class="goods__img">
-              <p class="goods__price">
+            <li class="product__item">
+              <img src="img/2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада" class="product__img">
+              <p class="product__price">
                 380₽<span>/кг</span>
               </p>
-              <h4 class="goods__caption">
+              <h4 class="product__caption">
                 Сливочно-кофейное с кусочками шоколада
               </h4>
             </li>
-            <li class="goods__item">
-              <img src="img/3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада" class="goods__img">
-              <p class="goods__price">
+            <li class="product__item">
+              <img src="img/3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада" class="product__img">
+              <p class="product__price">
                 355₽<span>/кг</span>
               </p>
-              <h4 class="goods__caption">
+              <h4 class="product__caption">
                 Сливочно-клубничное с присыпкой из белого шоколада
               </h4>
             </li>
-            <li class="goods__item">
-              <img src="img/4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой" class="goods__img">
-              <p class="goods__price">
+            <li class="product__item">
+              <img src="img/4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой" class="product__img">
+              <p class="product__price">
                 415₽<span>/кг</span>
               </p>
-              <h4 class="goods__caption">
+              <h4 class="product__caption">
                 Сливочное крем-брюле с карамельной подливкой
               </h4>
             </li>
@@ -221,7 +231,7 @@
         </div>
       </div>
       <section class="map">
-        <!-- Пока не знаю, как вставить карту -->
+        <!--iframe карта -->
         <div class="wrapper">
           <div class="map__address">
             <p class="map__street">
@@ -280,7 +290,7 @@
             </li>
           </ul>
           <div class="footer__copyright">
-            <a href="#">
+            <a href="https://htmlacademy.ru/">
               <img src="img/copyright.svg" alt="HTML Academy" width="108" height="39">
             </a>
             <p class="footer__copyright-text">
