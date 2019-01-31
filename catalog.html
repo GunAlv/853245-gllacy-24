@@ -137,10 +137,55 @@
             </li>
           </ul>
         </div>
-       <section class="sorting">
+       <section class="filter">
+        <h2 class="visually-hidden">Фильтр товаров</h2>
         <div class="wrapper">
-          <form action="#">
-           <!-- Здесь будет форма -->
+          <form class="filter__form" action="#" name="filter" method="post">
+           <fieldset class="filter__item">
+            <legend class="filter__legend">Сортировка:</legend>
+            <div class="filter__container filter__select">
+              <select name="filter-sorting" id="filter-sorting" class="filter__sorting">
+                <option value="popular">по популярности</option>
+                <option value="increase">по возрастанию</option>
+                <option value="descending">по убыванию</option>
+              </select>
+            </div>
+           </fieldset>
+           <fieldset class="filter__item">
+             <legend class="filter__legend">Цена: 100 руб. – 500 руб.</legend>
+             <div class="filter__container filter__range">
+              <input type="range" min="100" max="500" step="50" value="100" class="filter__range-input" id="range">
+             </div>
+           </fieldset>
+           <fieldset class="filter__item">
+             <legend class="filter__legend">Жирность:</legend>
+             <div class="filter__container filter__fat">
+               <input type="radio" name="fat" class="filter__input-fat" id="fat-zero">
+               <label for="fat-zero">0%</label>
+               <input type="radio" name="fat" class="filter__input-fat" id="fat-ten">
+               <label for="fat-ten">до 10%</label>
+               <input type="radio" name="fat" class="filter__input-fat" id="fat-thirty">
+               <label for="fat-thirty">до 30%</label>
+               <input type="radio" name="fat" class="filter__input-fat" id="fat-more-thirty">
+               <label for="fat-more-thirty">выше 30%</label>
+             </div>
+           </fieldset>
+           <fieldset class="filter__item">
+             <legend class="filter__legend">Наполнители:</legend>
+             <div class="filter__container filter__filling">
+              <input type="checkbox" name="filling" class="filter__filling-input" id="chocolate">
+              <label for="chocolate">шоколадные</label>
+              <input type="checkbox" name="filling" class="filter__filling-input" id="sugar">
+              <label for="sugar">сахарные присыпки</label>
+              <input type="checkbox" name="filling" class="filter__filling-input" id="fruits">
+              <label for="fruits">фрукты</label>
+              <input type="checkbox" name="filling" class="filter__filling-input" id="syrup">
+              <label for="syrup">сиропы</label>
+              <input type="checkbox" name="filling" class="filter__filling-input" id="jam">
+              <label for="jam">джемы</label>
+             </div>
+           </fieldset>
+           <a href="#" class="button filter__button">Применить</a>
           </form>
         </div>
        </section>
@@ -362,11 +407,11 @@
             </li>
           </ul>
           <div class="footer__copyright">
-            <a href="https://htmlacademy.ru/">
+            <a href="https://htmlacademy.ru/intensive/htmlcss">
               <img src="img/copyright.svg" alt="HTML Academy" width="108" height="39">
             </a>
             <p class="footer__copyright-text">
-              Сделано в <a class="footer__copyright-link" href="https://htmlacademy.ru/">HTML Academy</a> © 2019
+              Сделано в <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019
             </p>
           </div>
         </div>
