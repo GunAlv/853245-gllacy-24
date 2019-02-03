@@ -42,20 +42,27 @@
           </ul>
           <div class="main-nav__list">
             <div class="main-nav__search">
-              <a class="main-nav__search-link" href="#">
+              <a class="main-nav__search-link" href="#" aria-label="Поиск по сайту">
               </a>
               <div class="main-nav__search-container">
-                <input class="main-nav__search-input input" type="search" placeholder="Что ищем?">
+                <label for="search" class="visually-hidden">Поиск</label>
+                <input class="main-nav__search-input input" type="search" placeholder="Что ищем?" id="search">
               </div>
             </div>
             <div class="main-nav__login user-nav">
-              <a href="#" class="user-nav__login-link">Вход</a>
-              <form action="#" class="user-nav__login-form">
+              <a href="login.html" class="user-nav__login-link">Вход</a>
+              <form action="https://echo.htmlacademy.ru" method="post" class="user-nav__login-form">
                 <p>
-                  <input class="input user-nav__login-input" type="email" placeholder="Электронная почта">
+                  <label for="user-email" class="visually-hidden">
+                    Электронная почта
+                  </label>
+                  <input class="input user-nav__login-input" type="email" placeholder="Электронная почта" id="user-email">
                 </p>
                 <p>
-                  <input class="input user-nav__login-input" type="password" placeholder="Пароль">
+                  <label for="user-password" class="visually-hidden">
+                    Введите свой пароль
+                  </label>
+                  <input class="input user-nav__login-input" type="password" placeholder="Пароль" id="user-password">
                 </p>
                 <button type="submit" class="user-nav__login-button button">Войти</button>
                 <p>
@@ -65,11 +72,11 @@
               </form>
             </div>
             <div class="cart">
-              <a href="#" class="cart__link">2 товара</a>
+              <a href="#" class="cart__link" aria-label="Корзина товаров">2 товара</a>
               <div class="cart__container">
                 <ul class="cart__list">
                   <li class="cart__item">
-                    <button type="button" class="cart__remove">
+                    <button type="button" class="cart__remove" aria-label="Убрать товар из корзины">
                     </button>
                     <img src="img/cart-good-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом" class="cart__good">
                     <p class="cart__good-title">
@@ -83,7 +90,8 @@
                     </p>
                   </li>
                    <li class="cart__item">
-                    <button type="button" class="cart__remove">
+                    <button type="button" class="cart__remove"
+                    aria-label="Убрать товар из корзины">
                     </button>
                     <img src="img/cart-good-2.png" width="33" height="33" alt="Клубничный пломбир с присыпкой
                     из белого шоколада" class="cart__good">
@@ -140,7 +148,7 @@
        <section class="filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <div class="wrapper">
-          <form class="filter__form" action="#" name="filter" method="post">
+          <form class="filter__form" name="filter" method="get" action="https://echo.htmlacademy.ru">
            <fieldset class="filter__item">
             <legend class="filter__legend">Сортировка:</legend>
             <div class="filter__container filter__select">
@@ -160,32 +168,54 @@
            <fieldset class="filter__item">
              <legend class="filter__legend">Жирность:</legend>
              <div class="filter__container filter__fat">
-               <input type="radio" name="fat" class="filter__input-fat" id="fat-zero">
-               <label for="fat-zero">0%</label>
-               <input type="radio" name="fat" class="filter__input-fat" id="fat-ten">
-               <label for="fat-ten">до 10%</label>
-               <input type="radio" name="fat" class="filter__input-fat" id="fat-thirty">
-               <label for="fat-thirty">до 30%</label>
-               <input type="radio" name="fat" class="filter__input-fat" id="fat-more-thirty">
-               <label for="fat-more-thirty">выше 30%</label>
+              <ul class="filter__fat-list">
+                <li class="filter__fat-item">
+                  <input type="radio" name="fat" class="filter__input-fat" id="fat-zero">
+                  <label for="fat-zero">0%</label>
+                </li>
+                <li class="filter__fat-item">
+                  <input type="radio" name="fat" class="filter__input-fat" id="fat-ten">
+                  <label for="fat-ten">до 10%</label>
+                </li>
+                <li class="filter__fat-item">
+                  <input type="radio" name="fat" class="filter__input-fat" id="fat-thirty">
+                  <label for="fat-thirty">до 30%</label>
+                </li>
+                <li class="filter__fat-item">
+                  <input type="radio" name="fat" class="filter__input-fat" id="fat-more-thirty">
+                  <label for="fat-more-thirty">выше 30%</label>
+                </li>
+              </ul>
              </div>
            </fieldset>
            <fieldset class="filter__item">
              <legend class="filter__legend">Наполнители:</legend>
              <div class="filter__container filter__filling">
-              <input type="checkbox" name="filling" class="filter__filling-input" id="chocolate">
-              <label for="chocolate">шоколадные</label>
-              <input type="checkbox" name="filling" class="filter__filling-input" id="sugar">
-              <label for="sugar">сахарные присыпки</label>
-              <input type="checkbox" name="filling" class="filter__filling-input" id="fruits">
-              <label for="fruits">фрукты</label>
-              <input type="checkbox" name="filling" class="filter__filling-input" id="syrup">
-              <label for="syrup">сиропы</label>
-              <input type="checkbox" name="filling" class="filter__filling-input" id="jam">
-              <label for="jam">джемы</label>
+              <ul class="filter__filling-list">
+                <li class="filter__filling-item">
+                  <input type="checkbox" name="filling" class="filter__filling-input" id="chocolate">
+                  <label for="chocolate">шоколадные</label>
+                </li>
+                <li class="filter__filling-item">
+                  <input type="checkbox" name="filling" class="filter__filling-input" id="sugar">
+                  <label for="sugar">сахарные присыпки</label>
+                </li>
+                <li class="filter__filling-item">
+                  <input type="checkbox" name="filling" class="filter__filling-input" id="fruits">
+                  <label for="fruits">фрукты</label>
+                </li>
+                <li class="filter__filling-item">
+                  <input type="checkbox" name="filling" class="filter__filling-input" id="syrup">
+                  <label for="syrup">сиропы</label>
+                </li>
+                <li class="filter__filling-item">
+                  <input type="checkbox" name="filling" class="filter__filling-input" id="jam">
+                  <label for="jam">джемы</label>
+                </li>
+              </ul>
              </div>
            </fieldset>
-           <a href="#" class="button filter__button">Применить</a>
+           <button type="submit" class="button filter__button">Применить</button>
           </form>
         </div>
        </section>
@@ -337,33 +367,39 @@
               </button>
             </li>
           </ul>
-          <ul class="pagination">
-            <li class="pagination__item pagination__item--active">
-              <a href="catalog.html" class="pagination__link">
-                1
-              </a>
-            </li>
-            <li class="pagination__item">
-              <a href="#" class="pagination__link">
-                2
-              </a>
-            </li>
-            <li class="pagination__item">
-              <a href="#" class="pagination__link">
-                3
-              </a>
-            </li>
-            <li class="pagination__item">
-              <a href="#" class="pagination__link">
-                4
-              </a>
-            </li>
-            <li class="pagination__item">
-              <a href="#" class="pagination__link">
-                5
-              </a>
-            </li>
-          </ul>
+          <div class="pagination">
+            <a href="#" class="pagination__button pagination__button--prev" aria-label="Перейти на предыдущую страницу">
+            </a>
+            <ul class="pagination__list">
+              <li class="pagination__item">
+                <a href="catalog.html" class="pagination__link pagination__link--active">
+                  1
+                </a>
+              </li>
+              <li class="pagination__item">
+                <a href="#" class="pagination__link">
+                  2
+                </a>
+              </li>
+              <li class="pagination__item">
+                <a href="#" class="pagination__link">
+                  3
+                </a>
+              </li>
+              <li class="pagination__item">
+                <a href="#" class="pagination__link">
+                  4
+                </a>
+              </li>
+              <li class="pagination__item">
+                <a href="#" class="pagination__link">
+                  5
+                </a>
+              </li>
+            </ul>
+            <a href="#" class="pagination__button pagination__button--next" aria-label="Перейти на следующую страницу">
+            </a>
+          </div>
         </div>
       </section>
      </main>
@@ -372,23 +408,19 @@
         <div class="footer__container">
           <ul class="footer__social">
             <li class="footer__social-item">
-              <a href="#">
-                <!-- Твиттер -->
+              <a href="#" aria-label="Глейси в Твиттере">
               </a>
             </li>
             <li class="footer__social-item">
-              <a href="#">
-                <!-- Инстаграмм -->
+              <a href="#" aria-label="Глейси в Инстаграмме">
               </a>
             </li>
             <li class="footer__social-item">
-              <a href="#">
-                <!-- Фейсбук -->
+              <a href="#" aria-label="Глейси в Фейсбуке">
               </a>
             </li>
             <li class="footer__social-item">
-              <a href="#">
-                <!-- Вконтакте -->
+              <a href="#" aria-label="Глейси в ВКонтакте">
               </a>
             </li>
           </ul>

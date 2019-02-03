@@ -42,20 +42,27 @@
           </ul>
           <div class="main-nav__list">
             <div class="main-nav__search">
-              <a class="main-nav__search-link" href="#">
+              <a class="main-nav__search-link" href="#" aria-label="Поиск по сайту">
               </a>
               <div class="main-nav__search-container">
-                <input class="main-nav__search-input input" type="search" placeholder="Что ищем?">
+                <label for="search" class="visually-hidden">Поиск</label>
+                <input class="main-nav__search-input input" type="search" placeholder="Что ищем?" id="search">
               </div>
             </div>
             <div class="main-nav__login user-nav">
-              <a href="#" class="user-nav__login-link">Вход</a>
-              <form action="#" class="user-nav__login-form">
+              <a href="login.html" class="user-nav__login-link">Вход</a>
+              <form action="https://echo.htmlacademy.ru" method="post" class="user-nav__login-form">
                 <p>
-                  <input class="input user-nav__login-input" type="email" placeholder="Электронная почта">
+                  <label for="user-email" class="visually-hidden">
+                    Электронная почта
+                  </label>
+                  <input class="input user-nav__login-input" type="email" placeholder="Электронная почта" id="user-email">
                 </p>
                 <p>
-                  <input class="input user-nav__login-input" type="password" placeholder="Пароль">
+                  <label for="user-password" class="visually-hidden">
+                    Введите свой пароль
+                  </label>
+                  <input class="input user-nav__login-input" type="password" placeholder="Пароль" id="user-password">
                 </p>
                 <button type="submit" class="user-nav__login-button button">Войти</button>
                 <p>
@@ -65,7 +72,7 @@
               </form>
             </div>
             <div class="cart">
-              <a href="#" class="cart__link">Пусто</a>
+              <a href="#" class="cart__link" aria-label="Корзина товаров">Пусто</a>
             </div>
             <div class="main-nav__schedule">
               <p class="main-nav__schedule-days">
@@ -104,9 +111,12 @@
             </div>
           </div>
           <div class="slider__inputs">
-            <input type="checkbox" class="slider__input slider__input--first">
-            <input type="checkbox" class="slider__input slider__input--second">
-            <input type="checkbox" class="slider__input slider__input--third">
+            <input type="checkbox" id="slide-first" class="slider__input slider__input--first">
+            <label for="slide-first">Первый слайд</label>
+            <input type="checkbox" id="slide-second" class="slider__input slider__input--second">
+            <label for="slide-second">Второй слайд</label>
+            <input type="checkbox" id="slide-third" class="slider__input slider__input--third">
+            <label for="slide-third">Третий слайд</label>
           </div>
         </div>
       </section>
@@ -149,6 +159,9 @@
               <h4 class="product__caption">
                 Сливочное с апельсиновым джемом и цитрусовой стружкой
               </h4>
+              <button type="button" class="button product__button">
+                Быстрый просмотр
+              </button>
             </li>
             <li class="product__item">
               <img src="img/2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада" class="product__img">
@@ -158,6 +171,9 @@
               <h4 class="product__caption">
                 Сливочно-кофейное с кусочками шоколада
               </h4>
+              <button type="button" class="button product__button">
+                Быстрый просмотр
+              </button>
             </li>
             <li class="product__item">
               <img src="img/3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада" class="product__img">
@@ -167,6 +183,9 @@
               <h4 class="product__caption">
                 Сливочно-клубничное с присыпкой из белого шоколада
               </h4>
+              <button type="button" class="button product__button">
+                Быстрый просмотр
+              </button>
             </li>
             <li class="product__item">
               <img src="img/4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой" class="product__img">
@@ -176,6 +195,9 @@
               <h4 class="product__caption">
                 Сливочное крем-брюле с карамельной подливкой
               </h4>
+              <button type="button" class="button product__button">
+                Быстрый просмотр
+              </button>
             </li>
           </ul>
         </div>
@@ -221,10 +243,15 @@
                 Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
               </p>
               <p>
-                <input type="email" class="input mailing__input" placeholder="Электронная почта">
-                <button type="submit" class="button mailing__button">
-                  Отправить
-                </button>
+                <form action="https://echo.htmlacademy.ru" method="post" class="mailing__form">
+                  <label for="mailing-email" class="visually-hidden">
+                    Введите вашу электронную почту
+                  </label>
+                  <input type="email" class="input mailing__input" placeholder="Электронная почта" id="mailing-email">
+                  <button type="submit" class="button mailing__button">
+                    Отправить
+                  </button>
+                </form>
               </p>
             </div>
           </section>
@@ -246,6 +273,34 @@
             <button type="button" class="button map__button">
               Форма обратной связи
             </button>
+            <div class="feedback">
+              <form action="https://echo.htmlacademy.ru" method="post" class="feedback__form">
+                <h6 class="feedback__title">
+                  Мы обязательно вам ответим!
+                </h6>
+                <p>
+                  <label class="visually-hidden" for="feedback-name">
+                    Введите ваше имя
+                  </label>
+                  <input type="name" class="input feedback__input-name" placeholder="Как вас зовут?" id="feedback-name">
+                </p>
+                <p>
+                  <label class="visually-hidden" for="feedback-email">
+                    Введите вашу почту
+                  </label>
+                  <input type="email" class="input feedback__input-email" placeholder="Ваша почта для ответа?" id="feedback-email">
+                </p>
+                <p>
+                  <label class="visually-hidden" for="feedback-text">
+                    При желании введите дополнительные данные
+                  </label>
+                  <input type="text" class="input feedback__input-text" placeholder="Напишите что-нибудь..." id="feedback-text">
+                </p>
+                <button type="submit" class="button feedback__button">Отправить</button>
+              </form>
+              <button type="button" class="feedback__button-close" aria-label="Закрыть форму">
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -255,23 +310,19 @@
         <div class="footer__container">
           <ul class="footer__social">
             <li class="footer__social-item">
-              <a href="#">
-                <!-- Твиттер -->
+              <a href="#" aria-label="Глейси в Твиттере">
               </a>
             </li>
             <li class="footer__social-item">
-              <a href="#">
-                <!-- Инстаграмм -->
+              <a href="#" aria-label="Глейси в Инстаграмме">
               </a>
             </li>
             <li class="footer__social-item">
-              <a href="#">
-                <!-- Фейсбук -->
+              <a href="#" aria-label="Глейси в Фейсбуке">
               </a>
             </li>
             <li class="footer__social-item">
-              <a href="#">
-                <!-- Вконтакте -->
+              <a href="#" aria-label="Глейси в ВКонтакте">
               </a>
             </li>
           </ul>
@@ -299,7 +350,7 @@
           </div>
         </div>
       </div>
-     </footer>
+    </footer>
   </body>
 </html>
 
