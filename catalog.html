@@ -160,9 +160,14 @@
             </div>
            </fieldset>
            <fieldset class="filter__item">
-             <legend class="filter__legend">Цена: 100 руб. – 500 руб.</legend>
+             <label class="filter__legend">Цена:
+              <input type="text" class="filter__range-price" value="100"> руб. -
+              <input type="text" class="filter__range-price" value="500"> руб.
+             </label>
              <div class="filter__container filter__range">
-              <input type="range" min="100" max="500" step="50" value="100" class="filter__range-input" id="range">
+              <div class="filter__range-strip"></div>
+              <div class="filter__range-handle filter__range-handle--min"></div>
+              <div class="filter__range-handle filter__range-handle--max"></div>
              </div>
            </fieldset>
            <fieldset class="filter__item">
@@ -170,19 +175,19 @@
              <div class="filter__container filter__fat">
               <ul class="filter__fat-list">
                 <li class="filter__fat-item">
-                  <input type="radio" name="fat" class="filter__input-fat" id="fat-zero">
+                  <input type="radio" name="fat" class="filter__fat-radio" id="fat-zero">
                   <label for="fat-zero">0%</label>
                 </li>
                 <li class="filter__fat-item">
-                  <input type="radio" name="fat" class="filter__input-fat" id="fat-ten">
+                  <input type="radio" name="fat" class="filter__fat-radio" id="fat-ten">
                   <label for="fat-ten">до 10%</label>
                 </li>
                 <li class="filter__fat-item">
-                  <input type="radio" name="fat" class="filter__input-fat" id="fat-thirty">
+                  <input type="radio" name="fat" class="filter__fat-radio" id="fat-thirty">
                   <label for="fat-thirty">до 30%</label>
                 </li>
                 <li class="filter__fat-item">
-                  <input type="radio" name="fat" class="filter__input-fat" id="fat-more-thirty">
+                  <input type="radio" name="fat" class="filter__fat-radio" id="fat-more-thirty">
                   <label for="fat-more-thirty">выше 30%</label>
                 </li>
               </ul>
@@ -193,23 +198,23 @@
              <div class="filter__container filter__filling">
               <ul class="filter__filling-list">
                 <li class="filter__filling-item">
-                  <input type="checkbox" name="filling" class="filter__filling-input" id="chocolate">
+                  <input type="checkbox" name="filling" class="filter__filling-checkbox" id="chocolate">
                   <label for="chocolate">шоколадные</label>
                 </li>
                 <li class="filter__filling-item">
-                  <input type="checkbox" name="filling" class="filter__filling-input" id="sugar">
+                  <input type="checkbox" name="filling" class="filter__filling-checkbox" id="sugar">
                   <label for="sugar">сахарные присыпки</label>
                 </li>
                 <li class="filter__filling-item">
-                  <input type="checkbox" name="filling" class="filter__filling-input" id="fruits">
+                  <input type="checkbox" name="filling" class="filter__filling-checkbox" id="fruits">
                   <label for="fruits">фрукты</label>
                 </li>
                 <li class="filter__filling-item">
-                  <input type="checkbox" name="filling" class="filter__filling-input" id="syrup">
+                  <input type="checkbox" name="filling" class="filter__filling-checkbox" id="syrup">
                   <label for="syrup">сиропы</label>
                 </li>
                 <li class="filter__filling-item">
-                  <input type="checkbox" name="filling" class="filter__filling-input" id="jam">
+                  <input type="checkbox" name="filling" class="filter__filling-checkbox" id="jam">
                   <label for="jam">джемы</label>
                 </li>
               </ul>
