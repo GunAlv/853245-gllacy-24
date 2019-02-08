@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Глейси</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -14,7 +16,7 @@
           </a>
           <ul class="main-nav__list site-nav">
             <li class="site-nav__item">
-              <a href="catalog.html">Каталог</a>
+              <a class="site-nav__link" href="catalog.html">Каталог</a>
               <ul class="site-nav__submenu">
                 <li class="site-nav__submenu-item">
                   <a href="#">Новинки</a>
@@ -34,10 +36,10 @@
               </ul>
             </li>
             <li class="site-nav__item">
-              <a href="#">Доставка и оплата</a>
+              <a class="site-nav__link" href="#">Доставка и оплата</a>
             </li>
             <li class="site-nav__item">
-              <a href="#">О Компании</a>
+              <a class="site-nav__link" href="#">О Компании</a>
             </li>
           </ul>
           <div class="main-nav__list">
@@ -64,11 +66,13 @@
                   </label>
                   <input class="input user-nav__login-input" type="password" placeholder="Пароль" id="user-password">
                 </p>
-                <button type="submit" class="user-nav__login-button button">Войти</button>
-                <p>
-                  <a href="#" class="user-nav__login-link">Забыли пароль?</a><br>
-                  <a href="#" class="user-nav__login-link">Новая регистрация</a>
-                </p>
+                <div class="user-nav__login-flex">
+                  <button type="submit" class="user-nav__login-button button">Войти</button>
+                  <p>
+                    <a href="#" class="user-nav__login-link">Забыли пароль?</a><br>
+                    <a href="#" class="user-nav__login-link">Новая регистрация</a>
+                  </p>
+                </div>
               </form>
             </div>
             <div class="cart">
@@ -227,13 +231,13 @@
        <section class="goods">
         <div class="wrapper">
           <ul class="goods__list">
-            <li class="product">
+            <li class="product__item">
               <img src="img/1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" class="product__img">
               <p class="product__price">
-                310₽<span>/кг</span>
+                310 <span>₽</span><span>/кг</span>
               </p>
               <h4 class="product__caption">
-                Сливочное с апельсиновым джемом и цитрусовой стружкой
+                <span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
               </h4>
               <button type="button" class="button product__button">
                 Быстрый просмотр
@@ -242,10 +246,10 @@
             <li class="product__item">
               <img src="img/2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада" class="product__img">
               <p class="product__price">
-                380₽<span>/кг</span>
+                380 <span>₽</span><span>/кг</span>
               </p>
               <h4 class="product__caption">
-                Сливочно-кофейное с кусочками шоколада
+                <span>Сливочно-кофейное с кусочками шоколада</span>
               </h4>
               <button type="button" class="button product__button">
                 Быстрый просмотр
@@ -254,10 +258,10 @@
             <li class="product__item">
               <img src="img/3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада" class="product__img">
               <p class="product__price">
-                355₽<span>/кг</span>
+                355 <span>₽</span><span>/кг</span>
               </p>
               <h4 class="product__caption">
-                Сливочно-клубничное с присыпкой из белого шоколада
+                <span>Сливочно-клубничное с присыпкой из белого шоколада</span>
               </h4>
               <button type="button" class="button product__button">
                 Быстрый просмотр
@@ -266,10 +270,10 @@
             <li class="product__item">
               <img src="img/4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой" class="product__img">
               <p class="product__price">
-                415₽<span>/кг</span>
+                415 <span>₽</span><span>/кг</span>
               </p>
               <h4 class="product__caption">
-                Сливочное крем-брюле с карамельной подливкой
+                <span>Сливочное крем-брюле с карамельной подливкой</span>
               </h4>
               <button type="button" class="button product__button">
                 Быстрый просмотр
@@ -278,10 +282,10 @@
             <li class="product__item">
               <img src="img/5.png" width="267" height="267" alt="Сливочное с брусничным джемом" class="product__img">
               <p class="product__price">
-                325₽<span>/кг</span>
+                325 <span>₽</span><span>/кг</span>
               </p>
               <h4 class="product__caption">
-                Сливочное с брусничным джемом
+                <span>Сливочное с брусничным джемом</span>
               </h4>
               <button type="button" class="button product__button">
                 Быстрый просмотр
@@ -290,10 +294,10 @@
             <li class="product__item">
               <img src="img/6.png" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники" class="product__img">
               <p class="product__price">
-                410₽<span>/кг</span>
+                410 <span>₽</span><span>/кг</span>
               </p>
               <h4 class="product__caption">
-                Сливочно-черничное с цельными ягодами черники
+                <span>Сливочно-черничное с цельными ягодами черники</span>
               </h4>
               <button type="button" class="button product__button">
                 Быстрый просмотр
@@ -302,10 +306,10 @@
             <li class="product__item">
               <img src="img/7.png" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой" class="product__img">
               <p class="product__price">
-                375₽<span>/кг</span>
+                375 <span>₽</span><span>/кг</span>
               </p>
               <h4 class="product__caption">
-                Сливочно-лимонное с карамельной присыпкой
+                <span>Сливочно-лимонное с карамельной присыпкой</span>
               </h4>
               <button type="button" class="button product__button">
                 Быстрый просмотр
@@ -314,10 +318,10 @@
             <li class="product__item">
               <img src="img/8.png" width="267" height="267" alt="Сливочное с шоколадной стружкой" class="product__img">
               <p class="product__price">
-                320₽<span>/кг</span>
+                320 <span>₽</span><span>/кг</span>
               </p>
               <h4 class="product__caption">
-                Сливочное с шоколадной стружкой
+                <span>Сливочное с шоколадной стружкой</span>
               </h4>
               <button type="button" class="button product__button">
                 Быстрый просмотр
@@ -326,10 +330,10 @@
             <li class="product__item">
               <img src="img/9.png" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада" class="product__img">
               <p class="product__price">
-                440₽<span>/кг</span>
+                440 <span>₽</span><span>/кг</span>
               </p>
               <h4 class="product__caption">
-                Сливочно-ванильное с кусочками шоколада
+                <span>Сливочно-ванильное с кусочками шоколада</span>
               </h4>
               <button type="button" class="button product__button">
                 Быстрый просмотр
@@ -338,10 +342,10 @@
             <li class="product__item">
               <img src="img/10.png" width="267" height="267" alt="Сливочноe с ментоловым сиропом" class="product__img">
               <p class="product__price">
-                435₽<span>/кг</span>
+                435 <span>₽</span><span>/кг</span>
               </p>
               <h4 class="product__caption">
-                Сливочноe с ментоловым сиропом
+                <span>Сливочноe с ментоловым сиропом</span>
               </h4>
               <button type="button" class="button product__button">
                 Быстрый просмотр
@@ -350,10 +354,10 @@
             <li class="product__item">
               <img src="img/11.png" width="267" height="267" alt="Сливочное с кусочками черного шоколада" class="product__img">
               <p class="product__price">
-                355₽<span>/кг</span>
+                355 <span>₽</span><span>/кг</span>
               </p>
               <h4 class="product__caption">
-                Сливочное с кусочками черного шоколада
+                <span>Сливочное с кусочками черного шоколада</span>
               </h4>
               <button type="button" class="button product__button">
                 Быстрый просмотр
@@ -362,10 +366,10 @@
             <li class="product__item">
               <img src="img/12.png" width="267" height="267" alt="Сливочное с мятным сиропом" class="product__img">
               <p class="product__price">
-                420₽<span>/кг</span>
+                420 <span>₽</span><span>/кг</span>
               </p>
               <h4 class="product__caption">
-                Сливочное с мятным сиропом
+                <span>Сливочное с мятным сиропом</span>
               </h4>
               <button type="button" class="button product__button">
                 Быстрый просмотр
