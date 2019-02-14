@@ -576,19 +576,19 @@ a:active {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.product__item {
+.product {
   width: 267px;
   position: relative;
   margin-left: 26px;
 }
 
-.product__item img {
+.product img {
   width: 267px;
   height: 267px;
   margin-bottom: 8px;
 }
 
-.product__item::before {
+.product::before {
   position: absolute;
   content: '';
   background-image: url('../img/hit.svg');
@@ -600,7 +600,7 @@ a:active {
   z-index: 2;
 }
 
-.product__item::after {
+.product::after {
   position: absolute;
   content: '';
   width: 277px;
@@ -614,11 +614,11 @@ a:active {
   display: none;
 }
 
-.product__item:hover::after {
+.product:hover::after {
   display: block;
 }
 
-.product__item:hover .product__button {
+.product:hover .product__button {
   display: block;
 }
 
