@@ -19,10 +19,7 @@ body {
 }
 
 .body-catalog {
-  background-image: url('../img/backlight.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
+  background: linear-gradient(to bottom, #9cb0a5 0%,#9aaea3 7%,#859d8f 37%,#859d8f 100%);
 }
 
 img {
@@ -1291,7 +1288,7 @@ a:active {
   margin-left: 16px;
 }
 
-.filter__container {
+.filter__container:not(:first-child) {
   background-color: rgba(248, 247, 244, 0.2);
   border-radius: 20px;
 }
@@ -1303,16 +1300,47 @@ a:active {
   color: #ffffff;
 }
 
-.filter__sorting {
-  padding: 6px 0px 8px 14px;
-}
-
-.filter__sorting:hover {
-  background-color: black;
-}
-
 .filter__select {
+  position: relative;
+}
+
+.filter__select::before {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 11px solid #fff;
+  top: 13px;
+  right: 15px;
+}
+
+.filter__sorting {
+  padding: 9px 0px 9px 14px;
+  background-color: rgba(248, 247, 244, 0);
+  border-radius: 20px;
   width: 194px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.filter__sorting::-ms-expand {
+    display: none;
+}
+
+.filter__select:hover::before,
+.filter__select:focus::before {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 11px solid #333333;
+}
+
+.filter__sorting:hover,
+.filter__sorting:focus {
+  background-color: #ffffff;
+  color: #323232;
 }
 
 .filter__range-price {
@@ -1428,6 +1456,14 @@ a:active {
   top: 6px;
 }
 
+.filter__fat-label:hover::after {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.filter__fat-label:hover::before {
+  border: 3px solid rgba(255, 255, 255, 1);
+}
+
 .filter__fat-label[for="fat-zero"]::after,
 .filter__fat-label[for="fat-ten"]::after,
 .filter__fat-label[for="fat-thirty"]::after,
@@ -1443,6 +1479,13 @@ a:active {
   display: block;
 }
 
+#fat-zero:disabled ~ .filter__fat-label[for="fat-zero"]::before,
+#fat-ten:disabled ~ .filter__fat-label[for="fat-ten"]::before,
+#fat-thirty:disabled ~ .filter__fat-label[for="fat-thirty"]::before,
+#fat-more-thirty:disabled ~ .filter__fat-label[for="fat-more-thirty"]::before {
+  opacity: 0.4;
+}
+
 .filter__filling {
   min-width: 703px;
   padding: 8px 20px 8px 48px;
@@ -1454,6 +1497,42 @@ a:active {
 
 .filter__filling-item:last-child {
   margin-right: 0;
+}
+
+.filter__filling-label {
+  position: relative;
+  cursor: pointer;
+}
+
+.filter__filling-label::before {
+  position: absolute;
+  content: '';
+  background-image: url('../img/checkbox-off.svg');
+  width: 27px;
+  height: 23px;
+  background-repeat: no-repeat;
+  left: -33px;
+  opacity: 0.8;
+}
+
+.filter__filling-label:hover::before {
+  opacity: 1;
+}
+
+#chocolate:checked ~ .filter__filling-label[for="chocolate"]::before,
+#sugar:checked ~ .filter__filling-label[for="sugar"]::before,
+#fruits:checked ~ .filter__filling-label[for="fruits"]::before,
+#syrup:checked ~ .filter__filling-label[for="syrup"]::before,
+#jam:checked ~ .filter__filling-label[for="jam"]::before {
+  background-image: url('../img/checkbox-on.svg');
+}
+
+#chocolate:disabled ~ .filter__filling-label[for="chocolate"]::before,
+#sugar:disabled ~ .filter__filling-label[for="sugar"]::before,
+#fruits:disabled ~ .filter__filling-label[for="fruits"]::before,
+#syrup:disabled ~ .filter__filling-label[for="syrup"]::before,
+#jam:disabled ~ .filter__filling-label[for="jam"]::before {
+  opacity: 0.4;
 }
 
 .filter__button {
@@ -1468,7 +1547,7 @@ a:active {
   line-height: 18px;
   color: #fff;
   text-align: center;
-  margin-top: 5px;
+  margin-top: 9px;
   cursor: pointer;
 }
 
