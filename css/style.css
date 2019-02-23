@@ -10,21 +10,29 @@ html {
 
 body {
   margin: 0;
-  background-color: #849d8f;
   font-family: 'Roboto', 'Arial', sans-serif;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
   line-height: 22px;
+  transition: background-color 0.3s;
 }
 
-.body-catalog {
-  background: linear-gradient(to bottom, #9cb0a5 0%,#9aaea3 7%,#859d8f 37%,#859d8f 100%);
+.body--first-slide {
+  background-color: #849d8f;
+}
+
+.body--second-slide {
+  background-color: #8996a6;;
+}
+
+.body--third-slide {
+  background-color: #9d8b84;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -428,6 +436,39 @@ a:active {
   margin: 0;
 }
 
+.slider {
+  position: relative;
+  background-repeat: no-repeat;
+  padding-bottom: 42px;
+  padding-top: 320px;
+  min-height: 575px;
+}
+
+.slider::before {
+  position: absolute;
+  content: '';
+  width: 1056px;
+  height: 859px;
+  left: 17%;
+  top: -73px;
+  z-index: -1;
+}
+
+.slider--first.slider::before {
+  background-image: url('../img/slide-1.png');
+  transition: background-image 0.3s;
+}
+
+.slider--second.slider::before {
+  background-image: url('../img/slide-2.png');
+  transition: background-image 0.3s;
+}
+
+.slider--third.slider::before {
+  background-image: url('../img/slide-3.png');
+  transition: background-image 0.3s;
+}
+
 .slider__list {
   position: relative;
 }
@@ -436,6 +477,7 @@ a:active {
   position: absolute;
   left: 237px;
   display: none;
+  transition: 0.3s;
 }
 
 .slider__item--active {
@@ -462,25 +504,6 @@ a:active {
   max-width: 281px;
   display: block;
   margin: 0 auto;
-}
-
-.slider {
-  position: relative;
-  background-repeat: no-repeat;
-  padding-bottom: 42px;
-  padding-top: 320px;
-  min-height: 575px;
-}
-
-.slider::before {
-  position: absolute;
-  content: '';
-  background-image: url('../img/slide-1.png');
-  width: 1056px;
-  height: 859px;
-  left: 17%;
-  top: -73px;
-  z-index: -1;
 }
 
 #slide-first:checked ~ .slider__label[for="slide-first"],
@@ -861,6 +884,56 @@ a:active {
   left: 35%;
   height: 0;
   display: none;
+  z-index: 55;
+}
+
+.feedback--shake {
+  animation: shake 0.6s;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+.feedback--showed {
+  display: block;
+  animation: bounce 0.25s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .feedback p {
@@ -1067,6 +1140,10 @@ a:active {
 
 
 /*Стилизация каталога*/
+
+.body-catalog {
+  background: linear-gradient(to bottom, #9cb0a5 0%,#9aaea3 7%,#859d8f 37%,#859d8f 100%);
+}
 
 .main-header--catalog {
   margin-bottom: 28px;
@@ -1469,7 +1546,17 @@ a:active {
 .filter__fat-label[for="fat-thirty"]::after,
 .filter__fat-label[for="fat-more-thirty"]::after {
   left: -24px;
+  border: 3px solid rgba(255, 255, 255, 1);
   display: none;
+}
+
+#fat-zero:focus ~ .filter__fat-label[for="fat-zero"]::before,
+#fat-ten:focus ~ .filter__fat-label[for="fat-ten"]::before,
+#fat-thirty:focus ~ .filter__fat-label[for="fat-thirty"]::before,
+#fat-more-thirty:focus ~ .filter__fat-label[for="fat-more-thirty"]::before {
+  outline-width: 3px;
+  outline-style: solid;
+  outline-color: Highlight;
 }
 
 #fat-zero:checked ~ .filter__fat-label[for="fat-zero"]::after,
@@ -1517,6 +1604,16 @@ a:active {
 
 .filter__filling-label:hover::before {
   opacity: 1;
+}
+
+#chocolate:focus ~ .filter__filling-label[for="chocolate"]::before,
+#sugar:focus ~ .filter__filling-label[for="sugar"]::before,
+#fruits:focus ~ .filter__filling-label[for="fruits"]::before,
+#syrup:focus ~ .filter__filling-label[for="syrup"]::before,
+#jam:focus ~ .filter__filling-label[for="jam"]::before {
+  outline-width: 3px;
+  outline-style: solid;
+  outline-color: Highlight;
 }
 
 #chocolate:checked ~ .filter__filling-label[for="chocolate"]::before,
@@ -1677,4 +1774,18 @@ a:active {
   height: 1px;
   background-color: rgba(255, 255, 255, 0.3);
   top: -18px;
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 50;
+  cursor: pointer;
 }
