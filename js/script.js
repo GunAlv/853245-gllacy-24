@@ -15,14 +15,15 @@ try {
   isStorageSupport = false;
 }
 
-feedbackSubmit.addEventListener('submit', function(evt) {
-  if (!inputName || !inputEmail) {
-    /*Вот это не работает*/
+feedbackSubmit.addEventListener('click', function(evt) {
+  if (!inputName.value || !inputEmail.value) {
     evt.preventDefault();
+    feedback.classList.remove('feedback--shake');
+    feedback.offsetWidth = feedback.offsetWidth;
     feedback.classList.add('feedback--shake');
   } else {
     if (isStorageSupport) {
-      localStorage.setItem("login", inputEmail.value);
+      localStorage.setItem("login", inputName.value);
     }
   }
 });
@@ -41,16 +42,19 @@ mapBtn.addEventListener('click', function() {
 closeFeedback.addEventListener('click', function() {
   feedback.classList.remove('feedback--showed');
   overlay.style.display = 'none';
+  feedback.classList.remove('feedback--shake');
 });
 
 overlay.addEventListener('click', function() {
   this.style.display = 'none'
   feedback.classList.remove('feedback--showed');
+  feedback.classList.remove('feedback--shake');
 });
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
+    feedback.classList.remove('feedback--shake');
     if (feedback.classList.contains("feedback--showed")) {
       feedback.classList.remove("feedback--showed");
       overlay.style.display = 'none';
