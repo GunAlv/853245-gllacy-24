@@ -589,10 +589,12 @@ a:active {
 }
 
 .offers__item--first {
+  background-color: #c33e5c;
   background-image: url(../img/razz.jpg);
 }
 
 .offers__item--second {
+  background-color: #6C4936;
   background-image: url(../img/chocolate.jpg);
 }
 
@@ -707,6 +709,7 @@ a:active {
   width: 100%;
   padding: 25px 28px 0px 22px;
   color: #323232;
+  background-color: #ECDFBF;
   background-image: url('../img/pattern.jpg');
   background-repeat: no-repeat;
   border-radius: 15px;
@@ -768,6 +771,7 @@ a:active {
   min-height: 220px;
   padding: 24px 250px 0 20px;
   border-radius: 15px;
+  background-color:#E5EBCF;
   background-image: url('../img/stawberry.jpg');
   background-repeat: no-repeat;
 }
@@ -793,6 +797,7 @@ a:active {
 }
 
 .mailing {
+  background-color: #F8F7F4;
   background-image: url('../img/mailing.jpg');
   background-repeat: no-repeat;
   width: 560px;
