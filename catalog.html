@@ -171,10 +171,13 @@
             </div>
            </fieldset>
            <fieldset class="filter__item">
-             <label class="filter__legend">Цена:
-              <input type="text" class="filter__range-price" value="100"> <span class="filter__range-span">руб. -</span>
-              <input type="text" class="filter__range-price" value="500"> <span class="filter__range-span">руб.</span>
-             </label>
+            <div class="filter__item-flex">
+             <legend class="filter__legend">Цена:</legend>
+              <label for="min" class="visually-hidden">Минимальная цена</label>
+              <input type="text" class="filter__range-price" value="100" id="min"> <span class="filter__range-span">руб. –</span>
+              <label for="max" class="visually-hidden">Максимальная цена</label>
+              <input type="text" class="filter__range-price" value="500" id="max"> <span class="filter__range-span">руб.</span>
+            </div>
              <div class="filter__container filter__range">
               <div class="filter__range-strip">
                 <div class="filter__range-bar"></div>

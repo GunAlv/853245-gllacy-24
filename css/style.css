@@ -1375,6 +1375,11 @@ a:active {
   margin-right: 0;
 }
 
+.filter__item-flex {
+  display: flex;
+  /* margin-bottom: 6px; */
+}
+
 .filter__legend {
   font-size: 14px;
   line-height: 16px;
@@ -1439,10 +1444,24 @@ a:active {
 
 .filter__range-price {
   width: 30px;
+  margin-left: 2px;
 }
 
 .filter__range-span {
   margin-left: -2px;
+}
+
+.filter__item-flex {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  margin-bottom: 3px;
+}
+
+.filter__item-flex .filter__legend {
+  margin-bottom: 0;
 }
 
 .filter__range {
@@ -1612,8 +1631,8 @@ a:active {
   position: absolute;
   content: '';
   background-image: url('../img/checkbox-off.svg');
-  width: 27px;
-  height: 23px;
+  width: 20px;
+  height: 20px;
   background-repeat: no-repeat;
   left: -33px;
   opacity: 0.8;
@@ -1639,6 +1658,8 @@ a:active {
 #syrup:checked ~ .filter__filling-label[for="syrup"]::before,
 #jam:checked ~ .filter__filling-label[for="jam"]::before {
   background-image: url('../img/checkbox-on.svg');
+  width: 24px;
+  height: 20px;
 }
 
 #chocolate:disabled ~ .filter__filling-label[for="chocolate"]::before,
