@@ -1375,11 +1375,6 @@ a:active {
   margin-right: 0;
 }
 
-.filter__item-flex {
-  display: flex;
-  /* margin-bottom: 6px; */
-}
-
 .filter__legend {
   font-size: 14px;
   line-height: 16px;
@@ -1457,11 +1452,12 @@ a:active {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 .filter__item-flex .filter__legend {
-  margin-bottom: 0;
+  margin: 0;
+  margin-left: 16px;
 }
 
 .filter__range {
