@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="body body--first-slide">
      <header class="main-header">
@@ -73,7 +73,7 @@
                 <div class="user-nav__login-flex">
                   <button type="submit" class="user-nav__login-button button">Войти</button>
                   <p>
-                    <a href="#" class="user-nav__login-link">Забыли пароль?</a><br>
+                    <a href="#" class="user-nav__login-link">Забыли пароль?</a>
                     <a href="#" class="user-nav__login-link">Новая регистрация</a>
                   </p>
                 </div>
@@ -275,18 +275,18 @@
         </div>
         <div class="wrapper">
           <div class="map__address">
-            <p class="map__street">
-              Адрес главного офиса<br> и офлайн-магазина:<br>
+            <div class="map__street">
+              <p class="map__text">Адрес главного офиса и офлайн-магазина:</p>
               <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
-            </p>
-            <p class="map__phone">
-              Для заказов по телефону:<br>
-              <span>8 812 450-25-25</span><br>
-              (с 10 до 20 ежедневно)
-            </p>
-            <button type="button" class="button map__button">
+            </div>
+            <div class="map__phone">
+              <p class="map__text">Для заказов по телефону:</p>
+              <span>8 812 450-25-25</span>
+              <p class="map__text">(с 10 до 20 ежедневно)</p>
+            </div>
+            <a href="feedback.html" class="button map__button">
               Форма обратной связи
-            </button>
+            </a>
           </div>
         </div>
         <div class="feedback">
@@ -372,7 +372,7 @@
       </div>
     </footer>
     <div class="overlay"></div>
-    <script src="js/script.js"></script>
+    <script src="js/min-script.js"></script>
   </body>
 </html>
 

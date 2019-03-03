@@ -7,13 +7,13 @@ var inputEmail = document.querySelector('.feedback__input-email');
 var feedbackSubmit = document.querySelector('.feedback__button');
 
 var isStorageSupport = true;
-var storage = "";
+var storage = '';
 
 try {
-  storage = localStorage.getItem("login");
+  storage = localStorage.getItem('login');
 } catch (err) {
   isStorageSupport = false;
-}
+};
 
 feedbackSubmit.addEventListener('click', function(evt) {
   if (!inputName.value || !inputEmail.value) {
@@ -23,12 +23,13 @@ feedbackSubmit.addEventListener('click', function(evt) {
     feedback.classList.add('feedback--shake');
   } else {
     if (isStorageSupport) {
-      localStorage.setItem("login", inputName.value);
+      localStorage.setItem('login', inputName.value);
     }
   }
 });
 
-mapBtn.addEventListener('click', function() {
+mapBtn.addEventListener('click', function(evt) {
+  evt.preventDefault();
   feedback.classList.add('feedback--showed');
   overlay.style.display = 'block';
   if (storage) {
@@ -51,12 +52,12 @@ overlay.addEventListener('click', function() {
   feedback.classList.remove('feedback--shake');
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
     feedback.classList.remove('feedback--shake');
-    if (feedback.classList.contains("feedback--showed")) {
-      feedback.classList.remove("feedback--showed");
+    if (feedback.classList.contains('feedback--showed')) {
+      feedback.classList.remove('feedback--showed');
       overlay.style.display = 'none';
     }
   }
@@ -105,5 +106,5 @@ slider3.addEventListener('click', function() {
   sliderSection.classList.remove('slider--second');
   sliderSection.classList.remove('slider--first');
   sliderSection.classList.add('slider--third');
-})
+});
 
