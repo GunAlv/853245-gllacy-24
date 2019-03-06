@@ -82,42 +82,60 @@
             <div class="cart">
               <a href="#" class="cart__link cart__link--active" aria-label="Корзина товаров">2 товара</a>
               <div class="cart__container">
-                <ul class="cart__list">
-                  <li class="cart__item">
-                    <button type="button" class="cart__remove" aria-label="Убрать товар из корзины">
-                    </button>
-                    <img src="img/cart-good-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом" class="cart__good">
-                    <p class="cart__good-title">
-                      Пломбир с апельсиновым джемом
-                    </p>
-                    <p class="cart__good-weight">
-                      1,5 кг х <span>200 руб.</span>
-                    </p>
-                    <p class="cart__good-price">
-                      300 руб.
-                    </p>
-                  </li>
-                   <li class="cart__item">
-                    <button type="button" class="cart__remove"
-                    aria-label="Убрать товар из корзины">
-                    </button>
-                    <img src="img/cart-good-2.png" width="33" height="33" alt="Клубничный пломбир с присыпкой
-                    из белого шоколада" class="cart__good">
-                    <p class="cart__good-title">
-                      Клубничный пломбир с присыпкой из белого шоколада
-                    </p>
-                    <p class="cart__good-weight">
-                      1,5 кг х <span>300 руб.</span>
-                    </p>
-                    <p class="cart__good-price">
-                      450 руб.
-                    </p>
-                  </li>
-                </ul>
-                <p class="cart__total-amount">
-                  Итого: 750 руб.
-                </p>
-                <a href="#" class="cart__button button">Оформить заказ</a>
+                <form action="https://echo.htmlacademy.ru" method="post" class="cart__form">
+                  <table class="cart__table">
+                    <tbody>
+                      <tr class="cart__table-row cart__good-item">
+                        <td class="cart__remove">
+                          <button type="button" class="cart__remove-btn" aria-label="Убрать товар из корзины">
+                        </td>
+                        <td>
+                          <img src="img/cart-good-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом" class="cart__good-img">
+                        </td>
+                        <td class="cart__good-title">
+                          Пломбир с апельсиновым джемом
+                        </td>
+                        <td class="cart__good-weight">
+                          1,5 кг х <span>200 руб.</span>
+                        </td>
+                        <td class="cart__good-price">
+                          300 руб.
+                        </td>
+                      </tr>
+                      <tr class="cart__table-row cart__good-item--last">
+                        <td class="cart__remove">
+                          <button type="button" class="cart__remove-btn" aria-label="Убрать товар из корзины">
+                        </td>
+                        <td>
+                          <img src="img/cart-good-2.png" width="33" height="33" alt="Клубничный пломбир с присыпкой
+                          из белого шоколада" class="cart__good-img">
+                        </td>
+                        <td class="cart__good-title">
+                          Клубничный пломбир с присыпкой из белого шоколада
+                        </td>
+                        <td class="cart__good-weight">
+                          1,5 кг х <span>300 руб.</span>
+                        </td>
+                        <td class="cart__good-price">
+                          450 руб.
+                        </td>
+                      </tr>
+                      <tr class="cart__table-row cart__good-amount">
+                        <td>
+                          Итого:
+                        </td>
+                        <td>
+                          750 руб.
+                        </td>
+                      </tr>
+                      <tr class="cart__table-row cart__button-container">
+                        <td>
+                          <button type="submit" class="cart__button button">Оформить заказ</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </form>
               </div>
             </div>
             <div class="main-nav__schedule">
@@ -252,9 +270,9 @@
               <h4 class="product__caption">
                 <span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
               </h4>
-              <button type="button" class="button product__button">
+              <a href="#" class="button product__button">
                 Быстрый просмотр
-              </button>
+              </a>
             </li>
             <li class="product">
               <img src="img/2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада" class="product__img">
@@ -264,9 +282,9 @@
               <h4 class="product__caption">
                 <span>Сливочно-кофейное с кусочками шоколада</span>
               </h4>
-              <button type="button" class="button product__button">
+              <a href="#" class="button product__button">
                 Быстрый просмотр
-              </button>
+              </a>
             </li>
             <li class="product">
               <img src="img/3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада" class="product__img">
@@ -276,9 +294,9 @@
               <h4 class="product__caption">
                 <span>Сливочно-клубничное с присыпкой из белого шоколада</span>
               </h4>
-              <button type="button" class="button product__button">
+              <a href="#" class="button product__button">
                 Быстрый просмотр
-              </button>
+              </a>
             </li>
             <li class="product">
               <img src="img/4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой" class="product__img">
@@ -288,9 +306,9 @@
               <h4 class="product__caption">
                 <span>Сливочное крем-брюле с карамельной подливкой</span>
               </h4>
-              <button type="button" class="button product__button">
+              <a href="#" class="button product__button">
                 Быстрый просмотр
-              </button>
+              </a>
             </li>
             <li class="product">
               <img src="img/5.png" width="267" height="267" alt="Сливочное с брусничным джемом" class="product__img">
@@ -300,9 +318,9 @@
               <h4 class="product__caption">
                 <span>Сливочное с брусничным джемом</span>
               </h4>
-              <button type="button" class="button product__button">
+              <a href="#" class="button product__button">
                 Быстрый просмотр
-              </button>
+              </a>
             </li>
             <li class="product">
               <img src="img/6.png" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники" class="product__img">
@@ -312,9 +330,9 @@
               <h4 class="product__caption">
                 <span>Сливочно-черничное с цельными ягодами черники</span>
               </h4>
-              <button type="button" class="button product__button">
+              <a href="#" class="button product__button">
                 Быстрый просмотр
-              </button>
+              </a>
             </li>
             <li class="product">
               <img src="img/7.png" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой" class="product__img">
@@ -324,9 +342,9 @@
               <h4 class="product__caption">
                 <span>Сливочно-лимонное с карамельной присыпкой</span>
               </h4>
-              <button type="button" class="button product__button">
+              <a href="#" class="button product__button">
                 Быстрый просмотр
-              </button>
+              </a>
             </li>
             <li class="product">
               <img src="img/8.png" width="267" height="267" alt="Сливочное с шоколадной стружкой" class="product__img">
@@ -336,9 +354,9 @@
               <h4 class="product__caption">
                 <span>Сливочное с шоколадной стружкой</span>
               </h4>
-              <button type="button" class="button product__button">
+              <a href="#" class="button product__button">
                 Быстрый просмотр
-              </button>
+              </a>
             </li>
             <li class="product">
               <img src="img/9.png" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада" class="product__img">
@@ -348,9 +366,9 @@
               <h4 class="product__caption">
                 <span>Сливочно-ванильное с кусочками шоколада</span>
               </h4>
-              <button type="button" class="button product__button">
+              <a href="#" class="button product__button">
                 Быстрый просмотр
-              </button>
+              </a>
             </li>
             <li class="product">
               <img src="img/10.png" width="267" height="267" alt="Сливочноe с ментоловым сиропом" class="product__img">
@@ -360,9 +378,9 @@
               <h4 class="product__caption">
                 <span>Сливочноe с ментоловым сиропом</span>
               </h4>
-              <button type="button" class="button product__button">
+              <a href="#" class="button product__button">
                 Быстрый просмотр
-              </button>
+              </a>
             </li>
             <li class="product">
               <img src="img/11.png" width="267" height="267" alt="Сливочное с кусочками черного шоколада" class="product__img">
@@ -372,9 +390,9 @@
               <h4 class="product__caption">
                 <span>Сливочное с кусочками черного шоколада</span>
               </h4>
-              <button type="button" class="button product__button">
+              <a href="#" class="button product__button">
                 Быстрый просмотр
-              </button>
+              </a>
             </li>
             <li class="product">
               <img src="img/12.png" width="267" height="267" alt="Сливочное с мятным сиропом" class="product__img">
@@ -384,9 +402,9 @@
               <h4 class="product__caption">
                 <span>Сливочное с мятным сиропом</span>
               </h4>
-              <button type="button" class="button product__button">
+              <a href="#" class="button product__button">
                 Быстрый просмотр
-              </button>
+              </a>
             </li>
           </ul>
           <div class="pagination">
