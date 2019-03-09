@@ -1444,11 +1444,13 @@ a:active {
 }
 
 .cart__good-title {
+  margin: 0;
   margin-left: 10px;
   width: 220px;
 }
 
 .cart__good-weight {
+  margin: 0;
   margin-left: 33px;
 }
 
@@ -1457,6 +1459,7 @@ a:active {
 }
 
 .cart__good-price {
+  margin: 0;
   margin-left: 25px;
 }
 
@@ -1467,14 +1470,15 @@ a:active {
 }
 
 .cart__good-amount {
+  margin: 0;
   font-size: 15px;
   font-weight: 700;
   line-height: 18px;
-  margin-bottom: 13px;
 }
 
-.cart__good-amount td:first-child {
+.cart__table-position {
   margin-left: auto;
+  display: inline;
 }
 
 .cart__button {
@@ -1501,6 +1505,7 @@ a:active {
   content: '';
   bottom: -17px;
   width: 100%;
+  left: 0;
   height: 1px;
   background-color: #cacac7;
 }
