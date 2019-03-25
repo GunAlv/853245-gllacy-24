@@ -49,7 +49,7 @@
               </a>
               <div class="main-nav__search-container">
                 <label for="search" class="visually-hidden">Поиск</label>
-                <input class="main-nav__search-input input" type="search" placeholder="Что ищем?" id="search">
+                <input class="main-nav__search-input input" type="search" placeholder="Что ищем?" id="search" name="search">
               </div>
             </div>
             <div class="main-nav__login user-nav">
@@ -62,13 +62,13 @@
                   <label for="user-email" class="visually-hidden">
                     Электронная почта
                   </label>
-                  <input class="input user-nav__login-input" type="email" placeholder="Электронная почта" id="user-email">
+                  <input class="input user-nav__login-input" type="email" placeholder="Электронная почта" id="user-email" name="user-email">
                 </p>
                 <p>
                   <label for="user-password" class="visually-hidden">
                     Введите свой пароль
                   </label>
-                  <input class="input user-nav__login-input" type="password" placeholder="Пароль" id="user-password">
+                  <input class="input user-nav__login-input" type="password" placeholder="Пароль" id="user-password" name="user-password">
                 </p>
                 <div class="user-nav__login-flex">
                   <button type="submit" class="user-nav__login-button button">Войти</button>
@@ -193,9 +193,9 @@
             <div class="filter__item-flex">
             <span class="filter__legend">Цена:</span>
               <label for="min" class="visually-hidden">Минимальная цена</label>
-              <input type="text" class="filter__range-price" value="100" id="min"> <span class="filter__range-span">руб. –</span>
+              <input type="text" class="filter__range-price" value="100" id="min" name="min-price"> <span class="filter__range-span">руб. –</span>
               <label for="max" class="visually-hidden">Максимальная цена</label>
-              <input type="text" class="filter__range-price" value="500" id="max"> <span class="filter__range-span">руб.</span>
+              <input type="text" class="filter__range-price" value="500" id="max" name="max-price"> <span class="filter__range-span">руб.</span>
             </div>
              <div class="filter__container filter__range">
               <div class="filter__range-strip">
@@ -210,7 +210,7 @@
              <div class="filter__container filter__fat">
               <ul class="filter__fat-list">
                 <li class="filter__fat-item">
-                  <input type="radio" name="fat" class="visually-hidden filter__fat-radio" id="fat-zero">
+                  <input type="radio" name="fat" class="visually-hidden filter__fat-radio" id="fat-zero" name="fat-zero">
                   <label class="filter__fat-label" for="fat-zero">0%</label>
                 </li>
                 <li class="filter__fat-item">
